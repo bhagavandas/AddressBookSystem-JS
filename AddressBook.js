@@ -17,6 +17,9 @@ class Contact {
     phoneNumber;
     email;
 
+    
+
+
 constructor (...params){
     this.firstName = params[0];
     this.lastName = params[1];
@@ -120,12 +123,20 @@ set email(email){
 toString(){
     return "First Name : "+ this.firstName + ", Last Name : "+ this.lastName + ", Address : " + this.address + ", City : "+ this.city + ", State : "+ this.state +", Zip : "+ this.zip+ ", Phone Number : "+ this.phoneNumber + ", Email : "+ this.email;
 }
+
 }
 
 try{
-let contact = new Contact("david", "John", "Hyd", "Hydearabad", "Telangana", 500002, "91 95000000000", "david@gmail.com");
+let contact = new Contact("David", "John", "Hyd", "Hydearabad", "Telangana", 500002, "91 9500000000", "david@gmail.com");
 console.log(contact.toString());
 }
 catch(e){
 console.log(e);
 }
+//UC3
+let newAddressBook = new Array();
+let newContact = new Contact("Jerry", "Kelly", "ECIL", "Hydearabad", "Telangana", 500082, "91 9500854000", "jerry@gmail.com");
+newAddressBook.push(newContact.toString());
+//console.log(newContact.toString());
+console.log(newAddressBook);
+
